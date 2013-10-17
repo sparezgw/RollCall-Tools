@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Roll Call Tool</title>
+	<link href="css/sunny/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/main.min.js"></script>
+</head>
+<body>
+<h2>TFLS Roll Call Tools v1.8</h2>
+<div id="tabs">
+	<ul>
+		<li><a href="#position">图标抽选</a></li>
+		<li><a href="#names">姓名抽选</a></li>
+	</ul>
+	<div id="position">
+		<div id="chart"></div>
+		<div id="controler">
+			<form>
+				<label for="row">横向排数：</label>
+				<select name="row" id="row">
+					<option>1</option>
+					<option selected="selected">2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+				<label for="col">纵向列数：</label>
+				<select name="col" id="col">
+					<option>1</option>
+					<option selected="selected">2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+				<label for="people">人数：</label>
+				<input id="people_b" class="people" value="1" /><br />
+				<label id="label_b" for="speed" class="label">速度：50ms</label>
+				<div class='slider speed' id="speed_b" data-id="b"></div>
+			</form>
+		</div>
+		<div><p>
+			<button class="start" id="start_b" data-id="b">START</button> 
+			<button class="stop" id="stop_b" data-id="b">STOP</button>
+		</p></div>
+	</div>
+	<div id="names">
+		<div id="links"></div>
+		<div id="controler">
+			<label for="people">人数：</label>
+			<input id="people_a" class="people" value="1" /><br />
+			<label id="label_a" for="speed">速度：50ms</label>
+			<div class='slider speed' id="speed_a" data-id="a"></div>
+		</div>
+		<div><p>
+			<button id="name">学生姓名</button><br /><br />
+			<button class="start" id="start_a" data-id="a">START</button> 
+			<button class="stop" id="stop_a" data-id="a">STOP</button>
+		</p></div>
+		<div id="dialog-form" title="输入学生姓名">
+			<p class="validateTips">每行一个学生名字。</p>
+			<form>
+				<textarea rows="9" name="all" id="all" class="ui-widget-content ui-corner-all" ></textarea>
+			</form>
+		</div>
+	</div>
+</div>
+<div><p>Copyright 2013 TFLS IT Dept. Code by <i>Guowei Zhao</i>.</p></div>
+</body>
+</html>
